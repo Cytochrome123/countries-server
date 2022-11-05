@@ -67,7 +67,7 @@ app.get('/api/name/:search', async (req, res) => {
 })
 
 
-app.listen(8080, (err) => {
+app.listen(process.env.PORT || 8080, (err) => {
     if (err) console.log(err)
     else console.log('Server')
 })
