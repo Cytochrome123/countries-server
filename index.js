@@ -16,13 +16,13 @@ mongoose.connect(process.env.MONGO_URL, (err, conn) => {
 });
 
 app.use(express.json())
-// app.use(cors({
-//     origin: "http://localhost:3001",
-//     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-//     credentials: true, // allow session cookie from browser to pass through
-//     optionsSuccessStatus: 200,
+app.use(cors({
+    origin: "https://getcontries.netlify.app",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true, // allow session cookie from browser to pass through
+    optionsSuccessStatus: 200,
 
-// }))
+}))
 app.use(cors())
 
 
