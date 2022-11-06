@@ -26,6 +26,9 @@ app.use(cors({
 }))
 // app.use(cors())
 
+app.get('/', (req, res) => {
+    res.send('Hello')
+})
 
 app.get('/api', async (req, res) => {
     try {
