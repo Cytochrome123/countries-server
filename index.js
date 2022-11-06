@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGO_URL, (err, conn) => {
 
 app.use(express.json())
 app.use(cors({
-    // origin: "https://getcontries.netlify.app",
+    origin: "https://getcontries.netlify.app",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // allow session cookie from browser to pass through
     optionsSuccessStatus: 200,
